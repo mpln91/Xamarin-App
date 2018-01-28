@@ -29,9 +29,9 @@ namespace Calculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField OutputField { get; set; }
 
-        [Action ("UIButton407_TouchUpInside:")]
+        [Action ("AddButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton407_TouchUpInside (UIKit.UIButton sender);
+        partial void AddButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
