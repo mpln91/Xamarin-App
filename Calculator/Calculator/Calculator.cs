@@ -3,18 +3,15 @@ namespace Calculator
 {
     public class Calculator : ICalculator
     {
-        public Calculator()
+        private readonly IHelper m_helper = new Helper();
+        public int Add(string x, string y)
         {
+            return (m_helper.ConvertStringToInt(x) + m_helper.ConvertStringToInt(y));
         }
 
-        public int Add(int a, int b)
+        public int Multiply(string x, string y)
         {
-            return a + b;
-        }
-
-        public int Multiply(int a, int b)
-        {
-            return a * b;
+            return (m_helper.ConvertStringToInt(x) * m_helper.ConvertStringToInt(y));
         }
     }
 }

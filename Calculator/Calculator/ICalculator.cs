@@ -3,7 +3,7 @@ namespace Calculator
 {
     public interface ICalculator
     {
-        int Add(int a, int b);
-        int Multiply(int a, int b);
+        int Add(string x, string y);
+        int Multiply(string x, string y);
     }
 }

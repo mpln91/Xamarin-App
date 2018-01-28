@@ -6,16 +6,9 @@ namespace Calculator
 {
     public partial class ViewController : UIViewController
     {
-        public readonly ICalculator m_calculator;
-        public readonly IHelper m_helper;
+        public readonly ICalculator m_calculator = new Calculator();
         protected ViewController(IntPtr handle) : base(handle)
         {
-        }
-
-        public ViewController(ICalculator m_calculator, IHelper m_helper)
-        {
-            m_calculator = new Calculator();
-            m_helper = new Helper();
         }
 
         public override void ViewDidLoad()
@@ -32,30 +25,18 @@ namespace Calculator
 
         partial void AddButton_TouchUpInside(UIButton sender)
         {
-            var a = m_helper.ConvertStringToInt(InputFieldA.Text);
-            var b = m_helper.ConvertStringToInt(InputFieldB.Text);
-
-            InputFieldA.ResignFirstResponder();
-            InputFieldB.ResignFirstResponder();
             var result = "";
-            var m_calculator = new Calculator();
-            if (!string.IsNullOrWhiteSpace(a.ToString()) && !string.IsNullOrWhiteSpace(b.ToString()))
-                result = m_calculator.Add(a, b).ToString();
+            if (!string.IsNullOrWhiteSpace(InputFieldA.Text) && !string.IsNullOrWhiteSpace(InputFieldB.Text))
+                result = m_calculator.Add(InputFieldA.Text, InputFieldB.Text).ToString();
 
             OutputField.Text = result;
         }
 
         partial void MultiplyButton_TouchUpInside(UIButton sender)
         {
-            var a = m_helper.ConvertStringToInt(InputFieldA.Text);
-            var b = m_helper.ConvertStringToInt(InputFieldB.Text);
-
-            InputFieldA.ResignFirstResponder();
-            InputFieldB.ResignFirstResponder();
             var result = "";
-            var m_calculator = new Calculator();
-            if (!string.IsNullOrWhiteSpace(a.ToString()) && !string.IsNullOrWhiteSpace(b.ToString()))
-                result = m_calculator.Multiply(a, b).ToString();
+            if (!string.IsNullOrWhiteSpace(InputFieldA.Text) && !string.IsNullOrWhiteSpace(InputFieldB.Text))
+                result = m_calculator.Multiply(InputFieldA.Text, InputFieldB.Text).ToString();
 
             OutputField.Text = result;
         }
