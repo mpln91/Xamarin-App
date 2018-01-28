@@ -27,11 +27,19 @@ namespace Calculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton MultiplyButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField OutputField { get; set; }
 
         [Action ("AddButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void AddButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("MultiplyButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void MultiplyButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -48,6 +56,11 @@ namespace Calculator
             if (InputFieldB != null) {
                 InputFieldB.Dispose ();
                 InputFieldB = null;
+            }
+
+            if (MultiplyButton != null) {
+                MultiplyButton.Dispose ();
+                MultiplyButton = null;
             }
 
             if (OutputField != null) {

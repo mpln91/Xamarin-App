@@ -47,6 +47,15 @@
                                     <action selector="AddButton_TouchUpInside:" destination="BYZ-38-t0r" id="816" eventType="touchUpInside"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1621" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="104" y="225" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Multiply"/>
+                                <connections>
+                                    <action selector="AddButton_TouchUpInside:" destination="1623" id="1622" eventType="touchUpInside"/>
+                                    <action selector="MultiplyButton_TouchUpInside:" destination="BYZ-38-t0r" id="1625" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -54,6 +63,7 @@
                         <outlet property="InputFieldB" destination="201" id="name-outlet-201"/>
                         <outlet property="OutputField" destination="204" id="name-outlet-204"/>
                         <outlet property="AddButton" destination="407" id="name-outlet-407"/>
+                        <outlet property="MultiplyButton" destination="1621" id="name-outlet-1621"/>
                     </connections>
                     <toolbarItems>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="198"/>

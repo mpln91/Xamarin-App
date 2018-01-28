@@ -110,6 +110,8 @@
     </Compile>
     <Compile Include="Calculator.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="IHelper.cs" />
+    <Compile Include="Helper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
